@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+// Подключим позже:
+// import Hero from './components/Hero';
+// import Concept from './components/Concept';
+// import Catalog from './components/Catalog';
+// import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-sans">
+      <Header />
+
+      <main className="pt-20">
+        {/* Это место под секции ниже: */}
+
+        {/* <Hero /> */}
+        {/* <Concept /> */}
+        {/* <Catalog /> */}
+        {/* <Footer /> */}
+        
+        <section className="h-screen flex items-center justify-center bg-gray-100 text-gray-700">
+          <p className="text-xl">Здесь скоро будет лендинг «Посикунчик-трек» 🥟</p>
+        </section>
+      </main>
     </div>
   );
 }
