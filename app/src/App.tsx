@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
+import Hero from './components/Hero';
+
 // Подключим позже:
 // import Hero from './components/Hero';
 // import Concept from './components/Concept';
@@ -9,19 +11,9 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="font-sans">
-      <Header />
-
+     <Header />
       <main className="pt-20">
-        {/* Это место под секции ниже: */}
-
-        {/* <Hero /> */}
-        {/* <Concept /> */}
-        {/* <Catalog /> */}
-        {/* <Footer /> */}
-        
-        <section className="h-screen flex items-center justify-center bg-gray-100 text-gray-700">
-          <p className="text-xl">Здесь скоро будет лендинг «Посикунчик-трек» 🥟</p>
-        </section>
+        <Hero />        {/* Concept, Catalog и т.д. пойдут ниже */}
       </main>
     </div>
   );
