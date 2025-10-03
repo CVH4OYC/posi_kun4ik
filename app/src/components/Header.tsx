@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
-      } bg-white/80 backdrop-blur-sm`}
+      } bg-sok/80 backdrop-blur-sm`}
     >
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 group">
@@ -35,19 +35,19 @@ const Header: React.FC = () => {
         </a>
 
         <nav className="flex gap-6 text-sm font-ruslan text-gray-800">
-          <a href="#concept" className="hover:text-orange-700 transition">
+          <a href="#concept" className="hover:text-testo transition">
             Концепция
           </a>
-          <a href="#catalog" className="hover:text-orange-700 transition">
+          <a href="#catalog" className="hover:text-testo transition">
             Каталог
           </a>
-          <a href="#ideas" className="hover:text-orange-700 transition">
+          <a href="#ideas" className="hover:text-testo transition">
             Идеи
           </a>
-          <a href="#contacts" className="hover:text-orange-700 transition">
+          <a href="#contacts" className="hover:text-testo transition">
             Контакты
           </a>
-          <a href="#buy" className="text-orange-800 font-bold hover:underline">
+          <a href="#buy" className="text-myaso font-bold hover:underline">
             Купить
           </a>
         </nav>

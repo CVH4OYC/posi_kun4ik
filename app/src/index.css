@@ -13,4 +13,5 @@ body {
   background-position: top center;
   background-size: cover; /* растянет на весь экран */
   background-attachment: scroll; /* будет двигаться при прокрутке */
+  background-color: #e3c3a2;
 }
