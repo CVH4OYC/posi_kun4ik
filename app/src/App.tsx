@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Concept from './components/Concept';
 
 // Подключим позже:
 // import Hero from './components/Hero';
@@ -13,7 +14,8 @@ function App() {
     <div className="font-sans">
      <Header />
       <main className="pt-20">
-        <Hero />        {/* Concept, Catalog и т.д. пойдут ниже */}
+        <Hero />       
+        <Concept />
       </main>
     </div>
   );
