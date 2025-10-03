@@ -8,10 +8,18 @@
 }
 
 body {
-  background-image: url('./assets/bg/line.svg'); /* из public */
-  background-repeat: no-repeat;
+  background-image: url('./assets/bg/line.svg'); /* путь поправь: если svg в src, используй импорт */
+  background-repeat: no-repeat; /* по умолчанию — одна змейка */
   background-position: top center;
-  background-size: cover; /* растянет на весь экран */
-  background-attachment: scroll; /* будет двигаться при прокрутке */
+  background-size: cover; /* растягивается */
+  background-attachment: scroll; /* фон движется при скролле */
   background-color: #e3c3a2;
+}
+
+/* Для мобилок */
+@media (max-width: 768px) {
+  body {
+    background-repeat: repeat-y; /* дублируем вниз */
+    background-size: contain;   /* по ширине влезает */
+  }
 }
