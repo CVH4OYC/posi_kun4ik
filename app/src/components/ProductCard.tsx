@@ -1,5 +1,6 @@
 import React from 'react';
 import { Product } from '../types/product';
+import meme from '../assets/memes/lev.png'; 
 
 interface Props {
   product: Product;
@@ -16,9 +17,15 @@ const ProductCard: React.FC<Props> = ({ product }) => {
       <div className="p-4 flex-1 flex flex-col">
         <h3 className="text-xl font-ruslan text-myaso mb-2">{product.title}</h3>
         <p className="text-black text-base flex-1">{product.description}</p>
-        <button className="mt-4 bg-sok text-myaso px-4 py-2 rounded-lg font-ruslan hover:bg-myaso hover:text-sok transition">
+
+        <a
+          href={meme}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 bg-sok text-myaso px-4 py-2 rounded-lg font-ruslan hover:bg-myaso hover:text-sok transition text-center"
+        >
           Купить
-        </button>
+        </a>
       </div>
     </div>
   );

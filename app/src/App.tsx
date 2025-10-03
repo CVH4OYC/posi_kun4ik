@@ -3,8 +3,8 @@ import Hero from './components/Hero';
 import Concept from './components/Concept';
 import Catalog from './components/Catalog';
 import { Product } from './types/product';
+import Footer from './components/Footer';
 
-// ✅ импортируем картинки прямо из src
 import bagImg from './assets/products/bag.png';
 
 const products: Product[] = [
@@ -55,6 +55,7 @@ function App() {
         <Concept />
         <Catalog products={products} />
       </main>
+      <Footer />
     </div>
   );
 }

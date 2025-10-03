@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ReactComponent as LogoIcon } from '../assets/icons/Лого исходник.svg';
+import meme from '../assets/memes/lev.png'; 
 
 const Header: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -41,13 +42,15 @@ const Header: React.FC = () => {
           <a href="#catalog" className="hover:text-testo transition">
             Каталог
           </a>
-          <a href="#ideas" className="hover:text-testo transition">
-            Идеи
-          </a>
           <a href="#contacts" className="hover:text-testo transition">
             Контакты
           </a>
-          <a href="#buy" className="text-myaso font-bold hover:underline">
+          <a
+            href={meme}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-myaso font-bold hover:underline"
+          >
             Купить
           </a>
         </nav>
