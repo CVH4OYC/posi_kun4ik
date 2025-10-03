@@ -1,7 +1,7 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Concept from './components/Concept';
-import Catalog from './components/Catalog';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import Concept from './components/Concept/Concept';
+import Catalog from './components/Catalog/Catalog';
 import { Product } from './types/product';
 import Footer from './components/Footer';
 
