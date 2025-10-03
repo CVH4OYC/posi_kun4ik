@@ -6,3 +6,11 @@
   font-family: 'RuslanDisplay';
   src: url('./assets/fonts/RuslanDisplay-Regular.ttf') format('truetype');
 }
+
+body {
+  background-image: url('./assets/bg/line.svg'); /* из public */
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; /* растянет на весь экран */
+  background-attachment: scroll; /* будет двигаться при прокрутке */
+}

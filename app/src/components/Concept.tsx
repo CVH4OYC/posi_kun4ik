@@ -16,7 +16,7 @@ const Concept: React.FC = () => {
                     <img
                         src={ConceptImage}
                         alt="Концепция — сумка и природа"
-                        className="w-full max-w-lg mx-auto rounded-xl"
+                        className="w-full max-w-lg mx-auto rounded-2xl"
                     />
                 </div>
 
