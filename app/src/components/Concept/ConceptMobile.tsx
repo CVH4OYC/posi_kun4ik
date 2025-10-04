@@ -5,7 +5,7 @@ const ConceptMobile: React.FC = () => {
   return (
     <section id="concept" className="relative w-full py-16 px-6 text-center">
       {/* Полупрозрачный фон */}
-      <div className="absolute inset-0 bg-sok/80 backdrop-blur-sm rounded-xl z-0" />
+      <div className="absolute inset-0 bg-sok/60 backdrop-blur-sm rounded-xl z-0" />
 
       <h1 className="text-4xl font-ruslan text-black mb-8 relative z-10">Концепция</h1>
 

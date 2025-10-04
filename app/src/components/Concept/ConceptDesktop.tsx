@@ -7,7 +7,7 @@ const ConceptDesktop: React.FC = () => {
     <section id="concept" className="relative w-full py-24 px-6">
       <div className="relative max-w-screen-xl mx-auto flex flex-row items-center gap-12">
         {/* Полупрозрачный фон */}
-        <div className="absolute inset-0 bg-sok/80 backdrop-blur-sm rounded-xl z-0" />
+        <div className="absolute inset-0 bg-sok/60 backdrop-blur-sm rounded-xl z-0" />
 
         {/* Левая часть — картинка */}
         <div className="flex-1 z-20">

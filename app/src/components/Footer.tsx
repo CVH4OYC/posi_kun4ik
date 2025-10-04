@@ -3,7 +3,7 @@ import memeMax from '../assets/memes/max.jpg';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contacts" className="bg-sok/80 backdrop-blur-sm mt-20">
+    <footer id="contacts" className="bg-sok/60 backdrop-blur-sm mt-20">
       <div className="max-w-screen-xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Лого/название */}
         <h2 className="text-2xl font-ruslan text-myaso text-center md:text-left">
