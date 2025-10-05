@@ -28,14 +28,6 @@ const Footer: React.FC = () => {
           >
             Telegram
           </a>
-          <a
-            href={memeMax}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black hover:text-myaso transition"
-          >
-            Instagram
-          </a>
         </div>
       </div>
 
