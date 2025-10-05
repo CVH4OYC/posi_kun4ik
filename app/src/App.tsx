@@ -6,6 +6,7 @@ import Catalog from "./components/Catalog/Catalog";
 import Footer from "./components/Footer";
 import ThankYou from "./pages/ThankYou";
 import { Product } from "./types/product";
+import { useScrollToHash } from "./hooks/useScrollToHash";
 
 import bagImg from "./assets/products/bag.png";
 
@@ -51,45 +52,53 @@ const products: Product[] = [
 function App() {
   return (
     <Router>
-      <div className="font-sans relative min-h-screen flex flex-col">
-        {/* Общий фон с блюром */}
-        <div className="fixed inset-0 bg-sok/40 backdrop-blur-md -z-50" />
-
-        {/* Хедер */}
-        <Header />
-
-        <main className="flex-1 pt-20">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <section>
-                    <Hero />
-                  </section>
-
-                  <section id="concept">
-                    <Concept />
-                  </section>
-
-                  <section id="catalog" className="relative z-10 bg-transparent">
-                    <Catalog products={products} />
-                  </section>
-                </>
-              }
-            />
-
-            {/* Страница "Спасибо за покупку" */}
-            <Route path="/thanks" element={<ThankYou />} />
-          </Routes>
-        </main>
-
-        {/* Footer */}
-        <section>
-          <Footer />
-        </section>
-      </div>
+      <ScrollWrapper />
     </Router>
+  );
+}
+
+function ScrollWrapper() {
+  useScrollToHash();
+
+  return (
+    <div className="font-sans relative min-h-screen flex flex-col">
+      {/* Общий фон с блюром */}
+      <div className="fixed inset-0 bg-sok/40 backdrop-blur-md -z-50" />
+
+      {/* Хедер */}
+      <Header />
+
+      <main className="flex-1 pt-20">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="top">
+                  <Hero />
+                </section>
+
+                <section id="concept">
+                  <Concept />
+                </section>
+
+                <section id="catalog" className="relative z-10 bg-transparent">
+                  <Catalog products={products} />
+                </section>
+              </>
+            }
+          />
+
+          {/* Страница "Спасибо за покупку" */}
+          <Route path="/thanks" element={<ThankYou />} />
+        </Routes>
+      </main>
+
+      {/* Footer */}
+      <section id="contacts">
+        <Footer />
+      </section>
+    </div>
   );
 }
 

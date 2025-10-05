@@ -6,10 +6,15 @@ const HeaderMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#top" className="flex items-center gap-3 group">
+    <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between relative">
+      {/* Логотип — возвращает на главную */}
+      <Link
+        to="/"
+        className="flex items-center gap-3 group"
+        onClick={() => setIsOpen(false)}
+      >
         <LogoIcon className="w-12 h-12 transition-transform group-hover:scale-105" />
-      </a>
+      </Link>
 
       {/* Бургер */}
       <button
@@ -22,13 +27,16 @@ const HeaderMobile: React.FC = () => {
       {/* Меню */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-sok/60 backdrop-blur-sm flex flex-col gap-4 p-6 text-lg font-ruslan">
-          <a href="#concept" onClick={() => setIsOpen(false)}>Концепция</a>
-          <a href="#catalog" onClick={() => setIsOpen(false)}>Каталог</a>
-          <a href="#contacts" onClick={() => setIsOpen(false)}>Контакты</a>
-          <Link
-            to="/thanks"
-            onClick={() => setIsOpen(false)}
-          >
+          <a href="/#concept" onClick={() => setIsOpen(false)}>
+            Концепция
+          </a>
+          <a href="/#catalog" onClick={() => setIsOpen(false)}>
+            Каталог
+          </a>
+          <a href="/#contacts" onClick={() => setIsOpen(false)}>
+            Контакты
+          </a>
+          <Link to="/thanks" onClick={() => setIsOpen(false)}>
             Купить
           </Link>
         </div>
