@@ -5,7 +5,7 @@ const HeroMobile: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen overflow-hidden flex flex-col items-center justify-center px-6 py-16 text-center">
       {/* Полупрозрачный фон */}
-      <div className="absolute inset-0 bg-sok/60 top-10 bottom-10 backdrop-blur-sm rounded-xl z-0" />
+      <div className="absolute inset-0 top-10 bottom-10 rounded-xl z-0" />
 
       <div className="relative z-10 flex flex-col items-center">
         <h1 className="text-4xl font-ruslan text-black mb-6">

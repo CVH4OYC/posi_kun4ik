@@ -6,7 +6,7 @@ const HeroDesktop: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
       {/* Полупрозрачный фон */}
-      <div className="absolute inset-x-0 top-32 bottom-32 bg-sok/60 backdrop-blur-sm z-0 rounded-2xl" />
+      <div className="absolute inset-x-0 top-32 bottom-32 z-0 rounded-2xl" />
 
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 py-24 flex items-center justify-between gap-10">
         {/* Текст слева */}

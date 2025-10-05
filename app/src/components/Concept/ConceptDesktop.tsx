@@ -1,13 +1,12 @@
 import React from "react";
 import ConceptImage from "../../assets/images/Фото сувениров второй экран.jpg";
-import PosikDecor from "../../assets/bg/Посикунчики 2 экран.png";
 
 const ConceptDesktop: React.FC = () => {
   return (
     <section id="concept" className="relative w-full py-24 px-6">
       <div className="relative max-w-screen-xl mx-auto flex flex-row items-center gap-12">
         {/* Полупрозрачный фон */}
-        <div className="absolute inset-0 bg-sok/60 backdrop-blur-sm rounded-xl z-0" />
+        <div className="absolute inset-0 rounded-xl z-0" />
 
         {/* Левая часть — картинка */}
         <div className="flex-1 z-20">

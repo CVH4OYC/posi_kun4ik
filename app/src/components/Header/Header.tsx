@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
-      } bg-sok/80 backdrop-blur-sm`}
+      } bg-sok/60 backdrop-blur-sm`}
     >
       {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
     </header>
