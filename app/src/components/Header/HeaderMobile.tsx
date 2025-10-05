@@ -26,7 +26,7 @@ const HeaderMobile: React.FC = () => {
 
       {/* Меню */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-sok/60 backdrop-blur-sm flex flex-col gap-4 p-6 text-lg font-ruslan">
+        <div className="absolute top-full left-0 w-full bg-sok backdrop-blur-sm flex flex-col gap-4 p-6 text-lg font-ruslan">
           <a href="/#concept" onClick={() => setIsOpen(false)}>
             Концепция
           </a>
