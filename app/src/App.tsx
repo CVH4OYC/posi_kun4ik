@@ -48,30 +48,30 @@ const products: Product[] = [
 
 function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans relative">
+      {/* Общий блюр на всю страницу */}
+      <div className="fixed inset-0 bg-sok/40 backdrop-blur-md -z-50" />
+
+      {/* Хедер с прозрачным фоном */}
       <Header />
 
       <main className="pt-20">
-        {/* Все секции с общим фоном */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-sok/40 backdrop-blur-md -z-10" />
-          
-          <section className="relative z-10">
-            <Hero />
-          </section>
-          
-          <section className="relative z-10">
-            <Concept />
-          </section>
-        </div>
-
-        {/* Catalog без фона */}
+        {/* Hero и Concept — без отдельных фонов, используют общий блюр */}
         <section>
+          <Hero />
+        </section>
+
+        <section>
+          <Concept />
+        </section>
+
+        {/* Catalog — прозрачный, без блюра */}
+        <section className="relative z-10 backdrop-blur-none bg-transparent">
           <Catalog products={products} />
         </section>
 
-        {/* Footer с фоном */}
-        <section className="bg-sok/40 backdrop-blur-md">
+        {/* Footer с фоном (перекрывает общий блюр) */}
+        <section className="bg-myaso/40 backdrop-blur-md">
           <Footer />
         </section>
       </main>
