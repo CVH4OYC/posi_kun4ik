@@ -1,22 +1,36 @@
+// src/components/ProductCard/ProductCardDesktop.tsx
 import React from "react";
-import { Product } from "../../types/product";
+import { Product, ProductVariant } from "../../types/product";
 import { Link } from "react-router-dom";
+import ProductImageCarousel from "./ProductImageCarousel";
 
 interface Props {
-  product: Product;
+  product: Product & { currentVariant: ProductVariant };
+  currentVariantIndex: number;
+  onNext: () => void;
+  onPrev: () => void;
 }
 
-const ProductCardMobile: React.FC<Props> = ({ product }) => {
+const ProductCardDesktop: React.FC<Props> = ({
+  product,
+  currentVariantIndex,
+  onNext,
+  onPrev,
+}) => {
   return (
-    <div className="bg-testo/80 backdrop-blur-sm shadow-md rounded-md overflow-hidden flex flex-col">
-      <img
-        src={product.image}
+    <div className="bg-testo/80 backdrop-blur-sm shadow-md rounded-md overflow-hidden flex flex-col h-full">
+      <ProductImageCarousel
+        variants={product.variants}
+        currentVariantIndex={currentVariantIndex}
+        onNext={onNext}
+        onPrev={onPrev}
         alt={product.title}
-        className="w-full h-48 object-cover"
       />
+      
       <div className="p-4 flex-1 flex flex-col">
         <h3 className="text-lg font-ruslan text-myaso mb-2">{product.title}</h3>
         <p className="text-sm text-black flex-1">{product.description}</p>
+
         <Link
           to="/thanks"
           className="mt-4 w-full bg-sok text-myaso px-4 py-2 rounded-md font-ruslan hover:bg-myaso hover:text-sok transition text-center text-base"
@@ -28,4 +42,4 @@ const ProductCardMobile: React.FC<Props> = ({ product }) => {
   );
 };
 
-export default ProductCardMobile;
+export default ProductCardDesktop;
