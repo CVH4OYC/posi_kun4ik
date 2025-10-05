@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as LogoIcon } from "../../assets/icons/Лого исходник.svg";
-import meme from "../../assets/memes/lev.png";
+import { Link } from "react-router-dom";
 
 const HeaderMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,14 +25,12 @@ const HeaderMobile: React.FC = () => {
           <a href="#concept" onClick={() => setIsOpen(false)}>Концепция</a>
           <a href="#catalog" onClick={() => setIsOpen(false)}>Каталог</a>
           <a href="#contacts" onClick={() => setIsOpen(false)}>Контакты</a>
-          <a
-            href={meme}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/thanks"
             onClick={() => setIsOpen(false)}
           >
             Купить
-          </a>
+          </Link>
         </div>
       )}
     </div>

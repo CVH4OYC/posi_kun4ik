@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as LogoIcon } from "../../assets/icons/Лого исходник.svg";
-import meme from "../../assets/memes/lev.png";
+import { Link } from "react-router-dom";
 
 const HeaderDesktop: React.FC = () => {
   return (
@@ -13,14 +13,12 @@ const HeaderDesktop: React.FC = () => {
         <a href="#concept" className="hover:text-testo transition">Концепция</a>
         <a href="#catalog" className="hover:text-testo transition">Каталог</a>
         <a href="#contacts" className="hover:text-testo transition">Контакты</a>
-        <a
-          href={meme}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/thanks"
           className="text-myaso font-bold hover:underline"
         >
           Купить
-        </a>
+        </Link>
       </nav>
     </div>
   );
