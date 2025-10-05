@@ -21,12 +21,12 @@ const ProductImageCarousel: React.FC<Props> = ({
   const currentVariant = variants[currentVariantIndex];
 
   return (
-    <div className="relative group flex items-center justify-center bg-[#fef6ee] rounded-t-md min-h-[200px]">
+    <div className="relative group flex items-center justify-center bg-[#fef6ee] rounded-t-md h-48"> {/* Фиксированная высота */}
       <div className="relative w-full h-full flex items-center justify-center p-4">
         <img
           src={currentVariant.image}
           alt={alt}
-          className="max-w-full max-h-48 object-scale-down" // изменено на object-scale-down
+          className="max-w-full max-h-full object-contain" /* object-contain сохраняет пропорции */
         />
         
         {/* Стрелки для переключения */}
@@ -34,13 +34,13 @@ const ProductImageCarousel: React.FC<Props> = ({
           <>
             <button
               onClick={onPrev}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 flex items-center justify-center"
             >
               ‹
             </button>
             <button
               onClick={onNext}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 flex items-center justify-center"
             >
               ›
             </button>
