@@ -20,12 +20,6 @@ const ConceptDesktop: React.FC = () => {
 
         {/* Правая часть — текст */}
         <div className="flex-1 relative z-10">
-          <img
-            src={PosikDecor}
-            alt="посикунчик"
-            className="absolute left-[38%] top-[58%] -translate-x-1/2 -translate-y-1/2 w-[1200px] max-w-[100%] rotate-[5deg] z-10 opacity-90 pointer-events-none"
-          />
-
           <h1 className="text-6xl font-ruslan text-black mb-6 relative z-20">Концепция</h1>
 
           <ul className="flex flex-col gap-20 relative z-20">
