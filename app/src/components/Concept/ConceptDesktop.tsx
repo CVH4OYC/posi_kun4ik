@@ -1,5 +1,5 @@
 import React from "react";
-import ConceptImage from "../../assets/images/Фото сувениров второй экран.jpg";
+import ConceptImage from "../../assets/images/Фото сувениров второй экран.png";
 
 const ConceptDesktop: React.FC = () => {
   return (
