@@ -12,7 +12,7 @@ const CatalogMobile: React.FC<Props> = ({ products }) => {
       <div className="max-w-screen-md mx-auto">
         <h1 className="text-4xl font-ruslan text-black mb-8 text-center">Каталог</h1>
 
-        <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
